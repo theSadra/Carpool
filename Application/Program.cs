@@ -12,9 +12,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+
+    // Configuring swagger
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
